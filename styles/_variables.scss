@@ -1,0 +1,41 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #ffffff;
+  --color-cream: #f6f4ef;
+
+  --color-dark: #141414;
+  --color-dark-10: #1a1a1a;
+  --color-dark-15: #262626;
+  --color-dark-20: #333333;
+  --color-dark-40: #666666;
+
+  --color-gray-50: #7e7e81;
+  --color-gray-60: #98989a;
+  --color-gray-200: #dedbd4;
+  --color-gray-300: #c8c4bb;
+  --color-gray-500: #69675f;
+
+  --color-accent: #ff4f35;
+  --color-red: #ff5500;
+
+  --border: #{rem(1)} solid var(--color-dark-15);
+  --shadow: 0 0 0 #{rem(3)} #191919;
+
+  --font-family-base: Arial, Helvetica, sans-serif;
+  --font-family-accent: Arial, Helvetica, sans-serif;
+
+  --container-width: #{rem(1360)};
+  --container-padding-x: #{rem(24)};
+
+  --transition-duration: 0.25s;
+  --100vw: calc(100vw - var(--scrollbar-width));
+
+  @include laptop {
+    --container-width: #{rem(1180)};
+  }
+
+  @include mobile {
+    --container-padding-x: #{rem(16)};
+  }
+}

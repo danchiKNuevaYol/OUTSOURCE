@@ -1,0 +1,20 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/header';
+@use 'blocks/burger-button';
+@use 'blocks/home';
+@use 'blocks/collection';
+@use 'blocks/outfit-builder';
+
+@use 'blocks/catalog';
+@use 'blocks/filter';
+@use 'blocks/product-card';
+@use 'blocks/product-grid';
+@use 'blocks/product';
+
+@use 'blocks/cart';
+@use 'blocks/cart-item';
