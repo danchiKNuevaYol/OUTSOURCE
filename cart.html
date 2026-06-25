@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Корзина | OUTSOURCE</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/main.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header" data-js-header>
+        <div class="header__body">
+          <div class="header__body-inner container">
+            <a class="header__logo" href="./index.html">OUTSOURCE</a>
+    
+            <div class="header__overlay" data-js-header-overlay>
+              <nav class="header__menu" aria-label="Главная навигация">
+                <ul class="header__menu-list">
+                  <li class="header__menu-item">
+                    <a class="header__menu-link is-active" href="./index.html">Главная</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="./catalog.html">Каталог</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="./men.html">Мужчинам</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="./women.html">Женщинам</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="./builder.html">Собрать образ</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+    
+            <a class="header__cart" href="./cart.html">Корзина</a>
+    
+            <button
+              class="burger-button"
+              type="button"
+              data-js-header-burger-button
+              aria-label="Открыть меню">
+              <span class="burger-button__line"></span>
+              <span class="burger-button__line"></span>
+              <span class="burger-button__line"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+    <main>
+      <section class="cart">
+        <header class="cart__header">
+          <h1 class="cart__title">Корзина</h1>
+          <p class="cart__count">Количество товаров: 0</p>
+        </header>
+
+        <div class="cart__body">
+          <div class="cart__products"></div>
+
+          <aside class="cart__summary">
+            <div class="cart__summary-row cart__summary-row--total">
+              <span>Всего</span>
+              <span class="cart__subtotal">0 ₽</span>
+            </div>
+
+            <button class="cart__checkout" type="button">Оформить заказ</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

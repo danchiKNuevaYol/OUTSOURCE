@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар | OUTSOURCE</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/main.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__body">
+        <div class="header__body-inner container">
+          <a class="header__logo" href="./index.html">OUTSOURCE</a>
+
+          <div class="header__overlay" data-js-header-overlay>
+            <nav class="header__menu" aria-label="Главная навигация">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="./index.html">Главная</a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link is-active" href="./catalog.html">Каталог</a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="./men.html">Мужчинам</a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="./women.html">Женщинам</a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="./builder.html">Собрать образ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <a class="header__cart" href="./cart.html">Корзина</a>
+
+          <button class="burger-button" type="button" data-js-header-burger-button aria-label="Открыть меню">
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="product-page">
+      <section class="product">
+        <div class="product__gallery">
+          <img class="product__image" src="./images/products/ChatGPT Image 25 июн. 2026 г., 03_49_43 (3).png" alt="Товар">
+        </div>
+
+        <div class="product__info">
+          <p class="product__category">Категория</p>
+          <h1 class="product__title">Название товара</h1>
+          <p class="product__price">0 ₽</p>
+          <p class="product__description">Описание товара.</p>
+
+          <div class="product__colors"></div>
+
+          <div class="product__actions">
+            <button class="product__add-to-cart" type="button">В корзину</button>
+            <button class="product__favorite" type="button">♥ В понравившиеся</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-catalog container product-page__collection">
+        <div class="collection-catalog__head">
+          <div>
+            <p class="eyebrow">КАТАЛОГ</p>
+            <h2>ДРУГИЕ ВЕЩИ</h2>
+          </div>
+
+          <a class="text-link text-link--dark" href="./catalog.html">Смотреть весь каталог</a>
+        </div>
+
+        <div class="collection-catalog__track product-page__slider" data-js-related-slider aria-label="Другие товары"></div>
+      </section>
+    </main>
+  </body>
+</html>

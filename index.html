@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUTSOURCE — собери свой образ</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="./scripts/main.js" type="module"></script>
+</head>
+<body>
+  <header class="header" data-js-header>
+    <div class="header__body">
+      <div class="header__body-inner container">
+        <a class="header__logo" href="./index.html">OUTSOURCE</a>
+
+        <div class="header__overlay" data-js-header-overlay>
+          <nav class="header__menu" aria-label="Главная навигация">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link is-active" href="./index.html">Главная</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./catalog.html">Каталог</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./men.html">Мужчинам</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./women.html">Женщинам</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./builder.html">Собрать образ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <a class="header__cart" href="./cart.html">Корзина</a>
+
+        <button
+          class="burger-button"
+          type="button"
+          data-js-header-burger-button
+          aria-label="Открыть меню">
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="home-hero">
+      <div class="home-hero__image"></div>
+
+      <div class="home-hero__inner container">
+
+        <h1 class="home-hero__title">
+          OUT<br>
+          SOURCE
+        </h1>
+
+        <p class="home-hero__text">
+          Собери свой собственный стиль
+        </p>
+
+        <div class="home-hero__actions">
+          <a class="button button--light" href="./catalog.html">
+            Смотреть каталог
+          </a>
+
+          <a class="text-link" href="#collections">
+            Выбрать направление
+          </a>
+        </div>
+
+        <p class="home-hero__note">everyday essentials</p>
+      </div>
+    </section>
+
+    <section class="home-collections container" id="collections">
+      <div class="section-heading">
+        <p class="eyebrow">ВЫБЕРИ НАСТРОЕНИЕ</p>
+
+        <h2>
+          ЗДЕСЬ МОЖНО<br>
+          НАЙТИ ВСЕ ПОДХОДЯЩЕЕ
+        </h2>
+      </div>
+
+      <div class="home-collections__grid">
+        <a class="collection-card collection-card--women" href="./women.html">
+          <span class="collection-card__label">ЖЕНЩИНАМ</span>
+        </a>
+
+        <a class="collection-card collection-card--men" href="./men.html">
+          <span class="collection-card__label">МУЖЧИНАМ</span>
+        </a>
+      </div>
+
+      <h2>
+        И УВИДЕТЬ СВОЙ БУДУЩИЙ ОБРАЗ СРАЗУ<br>
+        </h2>
+    </section>
+
+    <section class="home-manifesto">
+      <div class="home-manifesto__inner container">
+        <p class="eyebrow">BUILD YOUR OWN FIT</p>
+
+        <p class="home-manifesto__text">
+          НАША ИДЕЯ - ФУНКЦИОНАЛЬНАЯ ОДЕЖДА. МЫ СОЗДАЕМ ВАМ ОБРАЗ СРАЗУ, ПОЭТОМУ АУТСОРС 
+        </p>
+
+        <a class="button button--dark" href="./builder.html">
+          Собрать образ
+        </a>
+      </div>
+    </section>
+
+    <img 
+        class="imggg"
+        src="images/index/QYYNRp-FzdYwrqEZp59hqGF-xodiEN_Fh3RGo0j6_1RQWgr9iMI7UpOHW8AlzXm4z0j-VTjp750Bwe41CiW-g0B3XbuckOdL64FooBMrUc1V-7z0j7omEvLTKYNACEilqvQwOCjYy1tweMncz-TcL9l0dtCBKJpuxRg1QwDpDOOeFGVFasn6yLBWYvglY3D9.jpeg" 
+        alt=""
+        style="display: block; margin-top: 70px; margin-left: auto; margin-right: auto;">
+
+    <section class="home-editorial container">
+      <div class="home-editorial__image"></div>
+
+      <div class="home-editorial__content">
+        <p class="eyebrow">КАЖДЫЙ ДЕНЬ</p>
+
+        <h2>
+          ОДЕЖДА<br>
+          КОТОРАЯ<br>
+          НЕ СКУЧНАЯ.
+        </h2>
+
+        <p>
+          Спокойные ткани и акцентные оттенки, образ будет выглядеть собранно
+        </p>
+
+        <a class="text-link text-link--dark" href="./catalog.html">
+          Перейти в каталог
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <p class="site-footer__brand">B/Y/F</p>
+      <p class="site-footer__text">Одежда для повседневных образов без лишнего шума.</p>
+
+      <a class="site-footer__link" href="./catalog.html">
+        В каталог
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

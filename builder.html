@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUTSOURCE — Собрать образ</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="./scripts/outfit-builder.js" type="module"></script>
+</head>
+<body>
+  <header class="header" data-js-header>
+    <div class="header__body">
+      <div class="header__body-inner container">
+        <a class="header__logo" href="./index.html">OUTSOURCE</a>
+
+        <div class="header__overlay" data-js-header-overlay>
+          <nav class="header__menu" aria-label="Главная навигация">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./index.html">Главная</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./catalog.html">Каталог</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./men.html">Мужчинам</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./women.html">Женщинам</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link is-active" href="./builder.html">Собрать образ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <a class="header__cart" href="./cart.html">Корзина</a>
+
+        <button
+          class="burger-button"
+          type="button"
+          data-js-header-burger-button
+          aria-label="Открыть меню">
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="outfit-builder container" data-js-outfit-builder>
+      <div class="outfit-builder__heading">
+        <div>
+          <p class="eyebrow">BUILD YOUR OWN FIT</p>
+          <h1 class="outfit-builder__title">СОБЕРИ<br>СВОЙ ОБРАЗ.</h1>
+        </div>
+
+        <div class="outfit-builder__heading-side">
+          <p class="outfit-builder__description">
+            Выбери вещи. Подходящие сочетания поднимутся выше по цвету и стилю.
+          </p>
+
+          <div class="outfit-builder__audiences">
+            <button
+              class="outfit-builder__audience is-active"
+              type="button"
+              data-js-builder-audience="women">
+              женщинам
+            </button>
+
+            <button
+              class="outfit-builder__audience"
+              type="button"
+              data-js-builder-audience="men">
+              мужчинам
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="outfit-builder__layout">
+        <section class="outfit-builder__preview">
+          <div class="outfit-builder__stage" data-js-builder-stage>
+            <p class="outfit-builder__stage-label">ТВОЙ ОБРАЗ</p>
+
+            <p class="outfit-builder__empty" data-js-builder-empty>
+              Выбери вещи справа
+            </p>
+
+            <div class="outfit-builder__slot outfit-builder__slot--top">
+              <span class="outfit-builder__slot-label">Верх</span>
+
+              <img
+                class="outfit-builder__layer"
+                src=""
+                alt=""
+                data-js-builder-layer="top">
+            </div>
+
+            <div class="outfit-builder__slot outfit-builder__slot--bottom">
+              <span class="outfit-builder__slot-label">Низ</span>
+
+              <img
+                class="outfit-builder__layer"
+                src=""
+                alt=""
+                data-js-builder-layer="bottom">
+            </div>
+
+            <div class="outfit-builder__slot outfit-builder__slot--dress">
+              <span class="outfit-builder__slot-label">Платье</span>
+
+              <img
+                class="outfit-builder__layer"
+                src=""
+                alt=""
+                data-js-builder-layer="dress">
+            </div>
+
+            <div class="outfit-builder__slot outfit-builder__slot--accessory">
+              <span class="outfit-builder__slot-label">Аксессуар</span>
+
+              <img
+                class="outfit-builder__layer"
+                src=""
+                alt=""
+                data-js-builder-layer="accessory">
+            </div>
+          </div>
+
+          <button
+            class="outfit-builder__clear"
+            type="button"
+            data-js-builder-clear>
+            Очистить образ
+          </button>
+        </section>
+
+        <section class="outfit-builder__controls">
+          <div class="outfit-builder__tabs">
+            <button
+              class="outfit-builder__tab is-active"
+              type="button"
+              data-js-builder-tab="top">
+              Верх
+            </button>
+
+            <button
+              class="outfit-builder__tab"
+              type="button"
+              data-js-builder-tab="bottom">
+              Низ
+            </button>
+
+            <button
+              class="outfit-builder__tab"
+              type="button"
+              data-js-builder-tab="dress">
+              Платья
+            </button>
+
+            <button
+              class="outfit-builder__tab"
+              type="button"
+              data-js-builder-tab="accessory">
+              Аксессуары
+            </button>
+          </div>
+
+          <p class="outfit-builder__hint" data-js-builder-hint></p>
+
+          <div class="outfit-builder__options" data-js-builder-options></div>
+
+          <div class="outfit-builder__summary">
+            <div class="outfit-builder__summary-top">
+              <p>В образе</p>
+
+              <button
+                class="outfit-builder__summary-clear"
+                type="button"
+                data-js-builder-clear>
+                Очистить
+              </button>
+            </div>
+
+            <ul class="outfit-builder__summary-list" data-js-builder-summary></ul>
+
+            <div class="outfit-builder__total">
+              <span>Итого</span>
+              <strong data-js-builder-total>0 ₽</strong>
+            </div>
+
+            <button
+              class="outfit-builder__add"
+              type="button"
+              data-js-builder-add
+              disabled>
+              Добавить образ в корзину
+            </button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

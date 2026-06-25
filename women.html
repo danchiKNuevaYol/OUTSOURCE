@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUTSOURCE — женщинам</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="./scripts/main.js" type="module"></script>
+</head>
+<body>
+  <header class="header" data-js-header>
+    <div class="header__body">
+      <div class="header__body-inner container">
+        <a class="header__logo" href="./index.html">OUTSOURCE</a>
+
+        <div class="header__overlay" data-js-header-overlay>
+          <nav class="header__menu" aria-label="Главная навигация">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./index.html">Главная</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./catalog.html">Каталог</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./men.html">Мужчинам</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link is-active" href="./women.html">Женщинам</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./builder.html">Собрать образ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <a class="header__cart" href="./cart.html">Корзина</a>
+
+        <button
+          class="burger-button"
+          type="button"
+          data-js-header-burger-button
+          aria-label="Открыть меню">
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="collection-hero collection-hero--women">
+      <div class="collection-hero__inner container">
+
+        <h1>
+          Женщинам
+          
+        </h1>
+
+        <p class="collection-hero__text">
+          Выразительная база, мягкий цвет 
+        </p>
+
+        <a class="button button--light" href="./catalog.html">
+          Открыть каталог
+        </a>
+      </div>
+
+      <p class="collection-hero__index">01</p>
+    </section>
+
+    <section class="collection-intro container">
+      <p class="eyebrow">КОЛЛЕКЦИЯ</p>
+
+      <div class="collection-intro__body">
+        <h2>
+          ВЕЩИ<br>
+          С ХАРАКТЕРОМ.
+        </h2>
+
+        <p>
+          Чтобы чувствовать себя комфортно и смело.
+        </p>
+      </div>
+    </section>
+
+    
+
+    <section class="collection-catalog container">
+      <div class="collection-catalog__head">
+        <div>
+          <p class="eyebrow">КАТАЛОГ</p>
+          
+        </div>
+
+        <a class="text-link text-link--dark" href="./catalog.html">
+          Смотреть весь каталог
+        </a>
+      </div>
+
+      <div
+        class="collection-catalog__track"
+        data-js-collection-slider
+        data-audience="women">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <p class="site-footer__brand">B/Y/F</p>
+      <p class="site-footer__text">Одежда для повседневных образов без лишнего шума.</p>
+
+      <a class="site-footer__link" href="./catalog.html">
+        В каталог
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
