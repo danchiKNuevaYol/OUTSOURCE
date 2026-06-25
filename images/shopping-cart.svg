@@ -1,0 +1,7 @@
+<!-- Hicon shopping-cart icon, MIT: https://github.com/coswise/hicon -->
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 10H18L16.7143 17H7.2857L6 10Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 10L4.7724 5.6523H2" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="7.5" cy="20.5" r="0.5" fill="#111111" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="16.5" cy="20.5" r="0.5" fill="#111111" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
