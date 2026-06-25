@@ -1,0 +1,115 @@
+@use '../helpers' as *;
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  max-width: rem(1000);
+  margin-inline: auto;
+  padding-block: clamp(rem(42), 6vw, rem(78));
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(8);
+    }
+  }
+
+  &__title {
+    @include fluid-text(42, 28);
+
+    font-weight: 700;
+  }
+
+  &__count {
+    color: var(--color-gray-500);
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: rem(40);
+    align-items: start;
+
+    @include laptop {
+      grid-template-columns: 1fr rem(300);
+      gap: rem(24);
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__products {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+
+  &__empty {
+    padding: rem(30);
+    color: var(--color-gray-500);
+    text-align: center;
+    border: rem(1) solid var(--color-gray-200);
+    border-radius: rem(16);
+  }
+
+  &__summary {
+    position: sticky;
+    top: rem(96);
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    height: fit-content;
+    padding: rem(24);
+    background-color: var(--color-light);
+    border: rem(1) solid var(--color-gray-200);
+    border-radius: rem(20);
+
+    @include tablet {
+      position: static;
+    }
+  }
+
+  &__summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(16);
+
+    &--total {
+      font-size: rem(22);
+      font-weight: 700;
+    }
+  }
+
+  &__subtotal {
+    white-space: nowrap;
+  }
+
+  &__checkout {
+    margin-top: rem(12);
+    padding: rem(16);
+    color: var(--color-light);
+    font-weight: 600;
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: rem(12);
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      opacity: .9;
+    }
+  }
+}
+
+.cart-page__collection {
+  padding-top: 0;
+}

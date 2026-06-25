@@ -1,0 +1,123 @@
+@use '../helpers' as *;
+
+.catalog {
+  display: grid;
+  margin-top: rem(150);
+  grid-template-columns: rem(280) 1fr rem(260);
+  gap: rem(40);
+  align-items: start;
+  margin-bottom: rem(150);
+
+  @include laptop {
+    grid-template-columns: rem(240) auto rem(220);
+    gap: rem(24);
+  }
+
+  @include tablet {
+    grid-template-columns: rem(160) 1fr;
+    gap: rem(24);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: rem(24);
+    padding-inline: rem(12);
+  }
+
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+
+    padding: rem(28);
+
+    border: rem(1) solid var(--color-gray-200);
+    border-radius: rem(20);
+
+    background-color: var(--color-light);
+
+    position:static;
+
+    height: fit-content;
+
+    top: rem(50);
+
+    @include mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: rem(16);
+        gap: rem(20);
+        position: static;
+      }
+  }
+
+  &__filters-title {
+    @include fluid-text(28, 22);
+
+    font-weight: 700;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    top: rem(40);
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  
+    position: sticky;
+    top: 40%;
+  
+    @include mobile {
+      display: none;
+    }
+  }
+  
+  &__sidebar-button {
+    width: 100%;
+    padding: rem(16);
+  
+    border: rem(1) solid var(--color-gray-200);
+    border-radius: rem(16);
+  
+    background-color: var(--color-light);
+  
+    text-align: left;
+    font-weight: 500;
+  
+    transition-duration: var(--transition-duration);
+  
+    @include hover {
+      border-color: var(--color-dark);
+    }
+  }
+  
+  &__wishlist {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  
+    padding: rem(20);
+  
+    border: rem(1) solid var(--color-gray-200);
+    border-radius: rem(16);
+  
+    background-color: var(--color-light);
+  }
+  
+  &__wishlist-title {
+    @include fluid-text(20, 18);
+  
+    font-weight: 500;
+  }
+  
+  &__wishlist-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+  }
+}

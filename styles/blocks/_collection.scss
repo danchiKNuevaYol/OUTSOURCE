@@ -1,0 +1,345 @@
+@use '../helpers' as *;
+
+.collection-hero {
+  position: relative;
+  min-height: min(rem(660), calc(100vh - rem(73)));
+  overflow: hidden;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  background-size: cover;
+
+  &--women {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(8, 8, 8, .86),
+        rgba(8, 8, 8, .22) 55%,
+        rgba(8, 8, 8, .04)
+      ),
+      url('../images/index/women-hero.png');
+    background-position: center;
+  }
+
+  &--men {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(8, 8, 8, .86),
+        rgba(8, 8, 8, .22) 55%,
+        rgba(8, 8, 8, .04)
+      ),
+      url('../images/index/men-hero.png');
+    background-position: center;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: inherit;
+    padding-block: rem(76);
+  }
+
+  h1 {
+    max-width: rem(820);
+    margin-top: rem(18);
+    font-size: clamp(rem(50), 7vw, rem(108));
+    font-weight: 800;
+    line-height: .83;
+    letter-spacing: -.08em;
+  }
+
+  &__text {
+    max-width: rem(380);
+    margin-top: rem(30);
+    color: rgba(255, 255, 255, .76);
+    font-size: rem(17);
+  }
+
+  .button {
+    align-self: flex-start;
+    margin-top: rem(34);
+  }
+
+  &__index {
+    position: absolute;
+    right: max(
+      var(--container-padding-x),
+      calc((100% - var(--container-width)) / 2)
+    );
+    bottom: rem(22);
+    color: rgba(255, 255, 255, .6);
+    font-size: rem(13);
+    letter-spacing: .1em;
+  }
+
+  @include mobile {
+    min-height: rem(650);
+    background-position: 58% center;
+  }
+}
+
+.collection-intro {
+  display: grid;
+  grid-template-columns: rem(250) 1fr;
+  gap: rem(32);
+  padding-block: clamp(rem(70), 10vw, rem(140));
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: rem(32);
+
+    h2 {
+      font-size: clamp(rem(38), 5vw, rem(70));
+      font-weight: 800;
+      line-height: .9;
+      letter-spacing: -.07em;
+    }
+
+    p {
+      align-self: end;
+      max-width: rem(360);
+      color: var(--color-gray-500);
+      font-size: rem(17);
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+
+    &__body {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.collection-categories {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr 1fr;
+  gap: rem(18);
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.category-tile {
+  position: relative;
+  display: flex;
+  align-items: end;
+  min-height: clamp(rem(260), 28vw, rem(420));
+  padding: rem(22);
+  overflow: hidden;
+  color: var(--color-light);
+  text-decoration: none;
+  background-color: var(--color-dark);
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, .03),
+      rgba(10, 10, 10, .72)
+    );
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    transition: scale .6s ease;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(rem(28), 3vw, rem(46));
+    font-weight: 800;
+    letter-spacing: -.055em;
+  }
+
+  @include hover {
+    &::after {
+      scale: 1.05;
+    }
+  }
+
+  &--women-one::after {
+    background-image: url('../images/products/ChatGPT Image 25 июн. 2026 г., 03_49_43 (3).png');
+  }
+
+  &--women-two::after {
+    background-image: url('../images/products/ChatGPT Image 25 июн. 2026 г., 03_49_44 (6).png');
+  }
+
+  &--women-three::after {
+    background-image: url('../images/products/ChatGPT Image 25 июн. 2026 г., 02_53_31.png');
+  }
+
+  &--men-one::after {
+    background-image: url('../images/products/ChatGPT Image 24 июн. 2026 г., 23_16_33 (2).png');
+  }
+
+  &--men-two::after {
+    background-image: url('../images/products/OIP.jpeg');
+  }
+
+  &--men-three::after {
+    background-image: url('../images/products/ChatGPT Image 24 июн. 2026 г., 23_16_37 (8).png');
+  }
+}
+
+.collection-catalog {
+  padding-block: clamp(rem(76), 10vw, rem(140));
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: rem(24);
+    margin-bottom: rem(32);
+
+    h2 {
+      margin-top: rem(14);
+      font-size: clamp(rem(38), 5vw, rem(68));
+      font-weight: 800;
+      line-height: .9;
+      letter-spacing: -.07em;
+    }
+
+    @include mobile {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__track {
+    display: grid;
+    grid-auto-columns: minmax(rem(220), rem(300));
+    grid-auto-flow: column;
+    gap: rem(16);
+    overflow-x: auto;
+    padding-bottom: rem(10);
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.collection-product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: var(--color-light);
+  border: rem(1) solid var(--color-gray-200);
+  scroll-snap-align: start;
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: .84;
+    object-fit: cover;
+    background-color: var(--color-cream);
+  }
+
+  &__body {
+    padding: rem(16);
+  }
+
+  &__category {
+    color: var(--color-gray-500);
+    font-size: rem(12);
+  }
+
+  &__title {
+    margin-top: rem(7);
+    font-size: rem(16);
+    line-height: 1.2;
+  }
+
+  &__price {
+    margin-top: rem(10);
+    font-size: rem(14);
+    font-weight: 700;
+  }
+
+  &__button {
+    width: calc(100% - #{rem(32)});
+    min-height: rem(44);
+    margin: auto rem(16) rem(16);
+    color: var(--color-dark);
+    font-size: rem(13);
+    font-weight: 700;
+    background-color: transparent;
+    border: rem(1) solid var(--color-dark);
+    cursor: pointer;
+    transition:
+      color var(--transition-duration),
+      background-color var(--transition-duration);
+
+    @include hover {
+      color: var(--color-light);
+      background-color: var(--color-dark);
+    }
+  }
+}
+
+.site-footer {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    gap: rem(24);
+    padding-block: rem(28);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__brand {
+    font-size: rem(20);
+    font-weight: 800;
+    letter-spacing: -.08em;
+  }
+
+  &__text {
+    color: rgba(255, 255, 255, .55);
+    font-size: rem(14);
+  }
+
+  &__link {
+    justify-self: end;
+    color: var(--color-light);
+    font-size: rem(14);
+    font-weight: 700;
+    text-decoration: none;
+
+    @include mobile {
+      justify-self: start;
+    }
+  }
+}

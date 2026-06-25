@@ -1,0 +1,354 @@
+@use '../helpers' as *;
+
+.eyebrow {
+  color: inherit;
+  font-size: rem(12);
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: rem(54);
+  padding-inline: rem(28);
+  border: rem(1) solid currentColor;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color var(--transition-duration),
+    color var(--transition-duration),
+    translate var(--transition-duration);
+
+  @include hover {
+    translate: 0 rem(-3);
+  }
+
+  &--light {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+
+    @include hover {
+      color: var(--color-light);
+      background-color: var(--color-dark);
+    }
+  }
+
+  &--dark {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+
+    @include hover {
+      color: var(--color-dark);
+      background-color: transparent;
+    }
+  }
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-light);
+  font-size: rem(14);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: rem(1) solid currentColor;
+  transition: color var(--transition-duration);
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &--dark {
+    color: var(--color-dark);
+  }
+}
+
+.home-hero {
+  position: relative;
+  min-height: min(rem(760), calc(100vh - rem(73)));
+  overflow: hidden;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 10, 10, .88) 0%,
+      rgba(10, 10, 10, .36) 46%,
+      rgba(10, 10, 10, .04) 72%
+    );
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/index/home-hero.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: inherit;
+    padding-block: rem(80);
+  }
+
+  &__title {
+    max-width: rem(720);
+    margin-top: rem(18);
+    font-size: clamp(rem(58), 9vw, rem(142));
+    font-weight: 400;
+    line-height: .82;
+  }
+
+  &__text {
+    max-width: rem(360);
+    margin-top: rem(32);
+    color: rgba(255, 255, 255, .74);
+    font-size: rem(17);
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(24);
+    margin-top: rem(38);
+  }
+
+  &__note {
+    position: absolute;
+    right: 0;
+    bottom: rem(32);
+    color: rgba(255, 255, 255, .58);
+    font-size: rem(12);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  @include mobile {
+    min-height: rem(670);
+
+    &::after {
+      background: linear-gradient(
+        90deg,
+        rgba(10, 10, 10, .92),
+        rgba(10, 10, 10, .25)
+      );
+    }
+
+    &__image {
+      background-position: 62% center;
+    }
+
+    &__inner {
+      padding-block: rem(62);
+    }
+
+    &__title {
+      font-size: clamp(rem(56), 17vw, rem(88));
+    }
+
+    &__note {
+      right: var(--container-padding-x);
+    }
+  }
+}
+
+.section-heading {
+  h2 {
+    margin-top: rem(14);
+    font-size: clamp(rem(38), 5vw, rem(72));
+    font-weight: 800;
+    line-height: .92;
+    letter-spacing: -.065em;
+  }
+}
+
+.home-collections {
+  padding-block: clamp(rem(76), 10vw, rem(150));
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(20);
+    margin-top: rem(52);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.collection-card {
+  position: relative;
+  display: flex;
+  min-height: clamp(rem(390), 43vw, rem(590));
+  overflow: hidden;
+  color: var(--color-light);
+  text-decoration: none;
+  background-color: var(--color-dark);
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, .08),
+      rgba(10, 10, 10, .8)
+    );
+    transition: opacity var(--transition-duration);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    transition: scale .65s ease;
+  }
+
+  @include hover {
+    &::after {
+      scale: 1.04;
+    }
+
+    &::before {
+      opacity: .7;
+    }
+  }
+
+  &--women::after {
+    background-image: url('../images/index/women-hero.png');
+  }
+
+  &--men::after {
+    background-image: url('../images/index/men-hero.png');
+  }
+
+  &__number,
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__number {
+    position: absolute;
+    top: rem(20);
+    left: rem(20);
+    color: rgba(255, 255, 255, .68);
+    font-size: rem(13);
+  }
+
+  &__content {
+    align-self: end;
+    width: 100%;
+    padding: rem(28);
+
+    p {
+      color: rgba(255, 255, 255, .74);
+      font-size: rem(13);
+    }
+
+    h3 {
+      margin-top: rem(6);
+      font-size: clamp(rem(46), 5vw, rem(78));
+      line-height: .9;
+      letter-spacing: -.08em;
+    }
+
+    span {
+      display: block;
+      margin-top: rem(30);
+      padding-top: rem(14);
+      border-top: rem(1) solid rgba(255, 255, 255, .4);
+      font-size: rem(14);
+      font-weight: 700;
+    }
+  }
+}
+
+.home-manifesto {
+  padding-block: clamp(rem(70), 9vw, rem(130));
+  color: var(--color-light);
+  background-color: var(--color-dark);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: rem(220) 1fr auto;
+    align-items: end;
+    gap: rem(36);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text {
+    max-width: rem(760);
+    font-size: clamp(rem(34), 4vw, rem(66));
+    font-weight: 700;
+    line-height: .98;
+    letter-spacing: -.055em;
+  }
+}
+
+.home-editorial {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  min-height: rem(620);
+  margin-block: clamp(rem(70), 10vw, rem(150));
+  background-color: #e6e1d7;
+
+  &__image {
+    min-height: rem(520);
+    background-image: url('../images/index/light-brown-beige-pants-indoors-still-life.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: clamp(rem(36), 6vw, rem(92));
+
+    h2 {
+      margin-top: rem(18);
+      font-size: clamp(rem(46), 5vw, rem(76));
+      font-weight: 800;
+      line-height: .88;
+      letter-spacing: -.08em;
+    }
+
+    > p:not(.eyebrow) {
+      max-width: rem(360);
+      margin-top: rem(28);
+      color: var(--color-gray-500);
+    }
+
+    .text-link {
+      margin-top: rem(32);
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
